@@ -15,14 +15,12 @@ Updated 20.10.2026 (session 2: the repository founded, the concept and the idea 
 
 ## P: the owner's own actions
 
-- **P-1** Send the LinkedIn profile address for the idea's team links (DECISIONS row 10).
-- **P-2** Read the idea text ([`submission/texts.md`](submission/texts.md)) and the concept PDF; then
-  submit the idea in your own Chrome by **Thu 22.10.** (hard deadline Fri 23.10. 21:29 EEST).
-- **P-3** Check pete@sunrisesoftware.app for messages from HackerEarth or Airwallex (guidelines, the
-  Slack link, credits): none reached the Gmail inbox by 20.10.2026.
+- **P-2** Confirm the submit of the idea in your own Chrome by **Thu 22.10.** (hard deadline Fri
+  23.10. 21:29 EEST); the text is read and the form is filled together (SUB-1).
 - **P-4** Confirm the Airwallex sandbox account exists and its Client ID and API key are in `.env`
   only (typed in through a prompt, never into the chat). A second sandbox business must be named
-  "New Business Sandbox" or "Sandbox Business" to be approved automatically.
+  "New Business Sandbox" or "Sandbox Business" to be approved automatically. Planned for the evening
+  of 20.10.2026.
 
 ## SUB: the submissions
 

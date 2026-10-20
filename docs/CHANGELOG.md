@@ -15,6 +15,8 @@ do not copy it here.
   from `concept.html` with Edge headless; measured as one A4 page.
 - The idea text drafted in [`submission/texts.md`](submission/texts.md), not yet submitted.
 - Four decisions asked as boxes (DECISIONS rows 7-10), each typed in the Atlas decision log.
+- The owner read the idea text with no changes and gave his LinkedIn address for the team links. No
+  message from HackerEarth or Airwallex had reached either of his inboxes by 20.10.2026.
 
 **Why:** the HackerEarth dashboard showed on 19.10.2026 that the idea phase is a shortlisting gate,
 and the idea form has only a title and a description, without the attachment field HackerEarth's

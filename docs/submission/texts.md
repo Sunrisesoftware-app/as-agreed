@@ -5,7 +5,7 @@ with the date; until then it is marked DRAFT.
 
 ## Idea phase (Registration & Idea Phase, deadline Fri 23.10.2026 21:29 EEST)
 
-**State: DRAFT (20.10.2026), not submitted.** The form has two required fields, Title and
+**State: DRAFT (20.10.2026), read by the owner on 20.10.2026 with no changes; not submitted.** The form has two required fields, Title and
 Description ("Describe your project, solution, or idea. You can use formatting and links."), and
 Save as Draft. A published idea cannot be changed. DECISIONS rows 7-10 decided the links.
 
@@ -35,6 +35,6 @@ As Agreed: an agent that pays only what was agreed
 - Concept on one page: https://github.com/Sunrisesoftware-app/as-agreed/blob/main/docs/concept/as-agreed-concept.pdf
 - Repository (documents only until the build phase opens): https://github.com/Sunrisesoftware-app/as-agreed
 - Previous work, the same verification principle in healthcare: As Prescribed, AMD Developer Hackathon ACT III. Repository https://github.com/Sunrisesoftware-app/as-prescribed, live demo https://asprescribed.sunrisesoftware.app, with its pre-registered evaluation reported as it fell.
-- Team: Petri Korhonen, Sunrise Software, Tampere, Finland. https://github.com/Sunrisesoftware-app · https://sunrisesoftware.app · LinkedIn: (the owner's address, BACKLOG P-1)
+- Team: Petri Korhonen, Sunrise Software, Tampere, Finland. https://github.com/Sunrisesoftware-app · https://sunrisesoftware.app · https://www.linkedin.com/in/petri-korhonen-8ab890434/
 
 Synthetic data and the Airwallex sandbox only.
