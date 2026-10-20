@@ -1,0 +1,14 @@
+# Secrets: .env holds the Airwallex sandbox credentials and is never committed (scripts/check-secrets.sh refuses it).
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Run outputs
+runs/

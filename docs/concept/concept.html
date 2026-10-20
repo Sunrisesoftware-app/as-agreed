@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>As Agreed: concept</title>
+<!-- Source of docs/concept/as-agreed-concept.pdf. Render with:
+     msedge --headless --no-pdf-header-footer --print-to-pdf=docs/concept/as-agreed-concept.pdf docs/concept/concept.html -->
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --ink: #14171f; --muted: #5b6270; --rule: #e3e5ea; --soft: #f5f6f8;
+    --brand: #0e5c63;
+    --matched: #1f7a4d; --conflict: #b42318; --proposal: #a15c07; --uncertain: #3a4ab0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; color: var(--ink); }
+  body {
+    width: 210mm; height: 297mm; padding: 11mm 13mm 9mm;
+    font: 8.9pt/1.38 "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    display: flex; flex-direction: column; gap: 3.4mm;
+  }
+  h1 { font-size: 25pt; line-height: 1; margin: 0; letter-spacing: -0.5pt; }
+  h2 {
+    font-size: 8pt; text-transform: uppercase; letter-spacing: 1.1pt; color: var(--brand);
+    margin: 0 0 1.6mm; font-weight: 700;
+  }
+  p { margin: 0; }
+  .lead { font-size: 12pt; margin-top: 1.6mm; font-weight: 600; }
+  .meta { color: var(--muted); font-size: 8.4pt; margin-top: 1.6mm; }
+  header { border-bottom: 2px solid var(--ink); padding-bottom: 2.6mm; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 1.6mm; margin-top: 2mm; }
+  .chip { border: 1px solid var(--rule); background: var(--soft); border-radius: 99px; padding: 0.7mm 2.6mm; font-size: 8.6pt; }
+
+  /* The check: inputs, the line, four states */
+  .check { display: grid; grid-template-columns: 50mm 9mm 1fr; align-items: stretch; gap: 0; }
+  .inputs { display: flex; flex-direction: column; gap: 1.6mm; justify-content: center; }
+  .in { border: 1px solid var(--rule); border-radius: 2mm; padding: 1.6mm 2.4mm; background: var(--soft); }
+  .in b { display: block; font-size: 8.9pt; }
+  .in span { color: var(--muted); font-size: 8pt; }
+  .arrow { display: flex; align-items: center; justify-content: center; }
+  .states { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6mm; }
+  .st { border-radius: 2mm; padding: 1.4mm 2.4mm; border: 1.4px solid; }
+  .st .name { font-weight: 700; font-size: 9.6pt; }
+  .st .when { font-size: 8.4pt; margin-top: 0.4mm; }
+  .st .then { font-size: 8.4pt; font-weight: 600; margin-top: 0.6mm; }
+  .matched   { border-color: var(--matched);   } .matched .name   { color: var(--matched); }
+  .conflict  { border-color: var(--conflict);  } .conflict .name  { color: var(--conflict); }
+  .proposal  { border-color: var(--proposal);  } .proposal .name  { color: var(--proposal); }
+  .uncertain { border-color: var(--uncertain); } .uncertain .name { color: var(--uncertain); }
+  .prec { font-size: 8.2pt; color: var(--muted); margin-top: 1.6mm; }
+
+  /* The demo: five beats */
+  .beats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.6mm; counter-reset: beat; }
+  .beat { border-top: 2.4px solid var(--ink); padding-top: 1.4mm; font-size: 8.4pt; }
+  .beat b { display: block; font-size: 8.9pt; margin-bottom: 0.4mm; }
+  .beat b::before { counter-increment: beat; content: counter(beat) "  "; color: var(--brand); }
+  .beat.turn { border-top-color: var(--conflict); }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  ul { margin: 0; padding-left: 4mm; }
+  li { margin: 0 0 0.4mm; }
+  code { font: 8.1pt/1.3 Consolas, "Cascadia Mono", monospace; background: var(--soft); padding: 0 1mm; border-radius: 1mm; }
+  .who { display: grid; grid-template-columns: 17mm 1fr; gap: 1mm 2.4mm; }
+  .who dt { font-weight: 700; }
+  .who dd { margin: 0; }
+
+  .inv { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6mm; margin: 1.4mm 0 1.8mm; }
+  .inv div { border: 1px solid var(--ink); border-radius: 2mm; padding: 1.4mm 2.2mm; font-weight: 600; font-size: 8.7pt; }
+  .inv div span { display: block; font-weight: 400; color: var(--muted); font-size: 7.9pt; }
+
+  footer { margin-top: auto; border-top: 1px solid var(--rule); padding-top: 2.6mm; font-size: 8.2pt; color: var(--muted); }
+  footer b { color: var(--ink); }
+  footer p + p { margin-top: 0.8mm; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>As Agreed</h1>
+  <p class="lead">An agent that pays supplier invoices only as far as they match what was agreed.</p>
+  <p class="meta">Concept for the Airwallex Agentic Banking Hackathon · Starter kits 1 (Adaptive Treasury Controller) and 3 (Payment Ops Incident Commander), with reconciliation · 20 October 2026 · No code yet: the build starts on 25 October.</p>
+</header>
+
+<section>
+  <h2>The problem</h2>
+  <p>A finance team paying supplier invoices in several currencies rarely loses money on arithmetic. It loses it on the payment that should never have left:</p>
+  <div class="chips">
+    <span class="chip">a duplicate invoice</span>
+    <span class="chip">a line nobody ordered</span>
+    <span class="chip">an email saying “we changed our bank details”</span>
+    <span class="chip">a transfer that fails quietly and is then paid twice</span>
+    <span class="chip">an amount that drifts after FX and fees</span>
+  </div>
+</section>
+
+<section>
+  <h2>The check: every invoice line, before any money moves</h2>
+  <div class="check">
+    <div class="inputs">
+      <div class="in"><b>What was agreed</b><span>purchase orders and contracts</span></div>
+      <div class="in"><b>Who may be paid</b><span>the verified beneficiary record</span></div>
+      <div class="in"><b>The payment policy, in code</b><span>autonomous limit, duplicate lock, reserve floor, FX tolerance</span></div>
+    </div>
+    <div class="arrow">
+      <svg width="26" height="60" viewBox="0 0 26 60" aria-hidden="true"><path d="M3 30 H20 M14 22 L22 30 L14 38" fill="none" stroke="#14171f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div>
+      <div class="states">
+        <div class="st matched"><div class="name">matched</div><div class="when">an agreed line supports it, no rule blocks it, the beneficiary is the verified one</div><div class="then">paid through Airwallex within the autonomous limit</div></div>
+        <div class="st conflict"><div class="name">conflict</div><div class="when">a rule blocks it: duplicate, changed beneficiary, over the limit, below the reserve floor</div><div class="then">payment halts; a person decides</div></div>
+        <div class="st proposal"><div class="name">proposal</div><div class="when">nothing that was agreed supports it</div><div class="then">shown to the approver; never paid without approval</div></div>
+        <div class="st uncertain"><div class="name">uncertain conversion</div><div class="when">after FX and fees the payable amount drifts beyond tolerance</div><div class="then">goes to the approver</div></div>
+      </div>
+      <p class="prec">Each line has exactly one state. Precedence: conflict &gt; proposal &gt; uncertain conversion &gt; matched. A halt a rule fired stays a halt, whatever a model says later.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>The demo</h2>
+  <div class="beats">
+    <div class="beat"><b>Goal</b>Pay this week’s six supplier invoices: USD, GBP and EUR, four suppliers.</div>
+    <div class="beat"><b>Initial plan</b>A state for every line; FX, the SWIFT fee and the reserve floor priced in.</div>
+    <div class="beat turn"><b>New information</b>A supplier emails new bank details. One transfer ends <code>CANCELLED</code> with a failure type.</div>
+    <div class="beat"><b>Revised decision</b>That supplier is held and verified out of band. The failed transfer is replaced under a duplicate lock; the original’s fate is recorded.</div>
+    <div class="beat"><b>Result</b>Balances, payments and holds, and a reconciliation report: every paid line traces to its invoice, agreement and approval.</div>
+  </div>
+</section>
+
+<section class="two">
+  <div>
+    <h2>Built on Airwallex (sandbox)</h2>
+    <ul>
+      <li><b>Plan:</b> <code>balances/current</code>, <code>fx/rates/current</code>, <code>fx/quotes/create</code>, <code>fx/conversions/create</code></li>
+      <li><b>Pay:</b> <code>beneficiaries/schema</code>, <code>/validate</code>, <code>/create</code>; <code>transfers/create</code>; US and GB local, EUR over SWIFT</li>
+      <li><b>Stage:</b> <code>simulation/deposit/create</code>, <code>simulation/transfers/{id}/transition</code>, behind one interface</li>
+      <li><b>Reconcile:</b> <code>GET transfers</code> and the payout webhooks (paid, failed, cancelled), signature checked and deduplicated</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Who decides what</h2>
+    <dl class="who">
+      <dt>Code</dt><dd>amounts, limits, the reserve floor, duplicate protection, state transitions, every Airwallex call (typed tools, a new request id per operation)</dd>
+      <dt>Models</dt><dd>read invoices, contracts and emails, match lines, explain exceptions; a second model from a different family tries to refute every match</dd>
+      <dt>A person</dt><dd>every conflict, proposal and uncertain conversion; each approval bound to the amount, currency, beneficiary and the evidence shown</dd>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <h2>Measured, not claimed</h2>
+  <div class="inv">
+    <div>no double payment<span>tested in code; one violation fails the build</span></div>
+    <div>no payment to an unverified beneficiary<span>tested in code</span></div>
+    <div>nothing paid below the reserve floor<span>tested in code</span></div>
+  </div>
+  <p>A pre-registered error-injection run (duplicate invoice, wrong amount, changed beneficiary, unordered line, wrong currency, omitted fee, and clean lines) reports recall per error type, false alarms on clean lines and time to decision, with the thresholds locked before the first run and the results reported as they fall.</p>
+</section>
+
+<footer>
+  <p><b>Previous work.</b> The same verification principle, first built for physiotherapy home programs: As Prescribed, AMD Developer Hackathon ACT III, with its pre-registered evaluation published as it fell (github.com/Sunrisesoftware-app/as-prescribed).</p>
+  <p><b>Sunrise Software</b>, Tampere, Finland · github.com/Sunrisesoftware-app/as-agreed · Synthetic data and the Airwallex sandbox only; no real company, person or payment data.</p>
+</footer>
+
+</body>
+</html>

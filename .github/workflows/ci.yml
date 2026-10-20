@@ -1,0 +1,30 @@
+name: ci
+
+# Never add `continue-on-error` to any step: it turns a green verdict into a lie.
+# The repository holds documents only until the build phase opens on 25.10.2026; the Python steps
+# (uv sync --frozen, ruff, pytest) are added with the first code (docs/BACKLOG.md CI-1).
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Secret scan
+        run: bash scripts/check-secrets.sh
+
+      - name: BUILD_INFO.json parses
+        run: python3 -c "import json; json.load(open('docs/BUILD_INFO.json', encoding='utf-8'))"

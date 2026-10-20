@@ -1,0 +1,27 @@
+{
+  "name": "as-agreed",
+  "version": "0.0.0",
+  "phase": "idea",
+  "phaseName": "Airwallex Agentic Banking Hackathon (HackerEarth): idea submission by Fri 23.10.2026 21:29 EEST, a shortlisting gate; build phase 25.10. 06:30 EET to Fri 13.11.2026 20:29 EET for shortlisted teams; finalists 15.11., demo day 19.11. (remote possible). Internal targets: idea Thu 22.10., build submission Thu 12.11.",
+  "session": 2,
+  "updated": "2026-10-20",
+  "state": "Session 2, 20.10.2026 (Code). Repository founded with documents only (concept, product, architecture, decisions); no product code before 25.10. The one-page concept is docs/concept/as-agreed-concept.pdf, rendered from concept.html. The idea text is drafted in docs/submission/texts.md and not yet submitted; it waits for the owner's LinkedIn address and his read. The organisers have published no judging criteria and no rule on prior work (HackerEarth discussion read 20.10.2026). Session 1 (19.10.2026) resolved the handoff's open checks into Atlas AS-AGREED-HANDOFF v4.",
+  "github": "github.com/Sunrisesoftware-app/as-agreed (public, MIT)",
+  "machines": {
+    "windows": "E:\\projects\\sunrisesoftware\\hackathons\\as-agreed on the owner's machine (PowerShell 5.1 for the owner; Git Bash for the agent). The shared practice is hackathons\\CLAUDE.md (private repository Sunrisesoftware-app/hackathon-kit).",
+    "truth": "main on GitHub is the only truth"
+  },
+  "atlas": {
+    "system": "none yet (BACKLOG ATLAS-1)",
+    "artifacts": {
+      "handoff": "AS-AGREED-HANDOFF v4"
+    },
+    "decisions": "DECISIONS rows 7-10: dec_e54bebf20a5342ca, dec_411a967615e34a30, dec_5b78f1ec9f8745b6, dec_5b00d5b3afbe4563"
+  },
+  "ci": ".github/workflows/ci.yml: secret scan and BUILD_INFO.json parse; the Python steps arrive with the first code (BACKLOG CI-1)",
+  "next_session": {
+    "start": "git fetch origin; git rev-list --left-right --count origin/main...HEAD; read this file, docs/BACKLOG.md and Atlas AS-AGREED-HANDOFF v4.",
+    "first": "Finish the idea with the owner: his LinkedIn address into docs/submission/texts.md, his read of the text and the concept PDF, then the HackerEarth form together in his Chrome (Save as Draft first; a published idea cannot be changed). Target Thu 22.10., hard deadline Fri 23.10. 21:29 EEST.",
+    "then": "Re-read the HackerEarth discussion for the rubric and the prior-work rule; record the submitted text exactly in docs/submission/texts.md; then the pre-build window's work in docs/BACKLOG.md."
+  }
+}
