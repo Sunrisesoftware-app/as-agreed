@@ -5,9 +5,13 @@ with the date; until then it is marked DRAFT.
 
 ## Idea phase (Registration & Idea Phase, deadline Fri 23.10.2026 21:29 EEST)
 
-**State: DRAFT (20.10.2026), read by the owner on 20.10.2026 with no changes; not submitted.** The form has two required fields, Title and
-Description ("Describe your project, solution, or idea. You can use formatting and links."), and
-Save as Draft. A published idea cannot be changed. DECISIONS rows 7-10 decided the links.
+**State: SUBMITTED on Thu 22.10.2026 at 18:08 EEST** (HackerEarth status "Published"), filled in
+together with the owner in his Chrome; he confirmed the submit. The text below is exactly as
+submitted: it was converted from this file to HTML by script (bold, two bullet lists, seven links)
+and set into the form's TinyMCE editor, saved as a draft at 18:07, read back from the draft (all
+seven links, eight list items, the closing line) and then submitted. The form has two required
+fields, Title and Description ("Describe your project, solution, or idea. You can use formatting
+and links."). DECISIONS rows 7-10 decided the links.
 
 ### Title
 

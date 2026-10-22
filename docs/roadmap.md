@@ -6,7 +6,7 @@ themselves live in [`BACKLOG.md`](BACKLOG.md).
 | When | What | Gate |
 |---|---|---|
 | Tue 20.10. (done) | Repository founded with documents only; the one-page concept; the idea text drafted | The concept PDF fits one page; the secret scan passes |
-| Wed 21.10.-Thu 22.10. | The owner's read; the idea submitted together in his Chrome | Idea published on HackerEarth (target Thu 22.10.) |
+| Thu 22.10. (done) | The owner's read; the idea submitted together in his Chrome | Idea published on HackerEarth (passed 22.10. 18:08 EEST) |
 | Fri 23.10. 21:29 | **Idea deadline** (shortlisting follows) | — |
 | until Sat 24.10. | Synthetic data specification, the pre-registration, decision boxes (design only) | The owner approves the specification |
 | Sun 25.10. 06:30 | Build phase opens for shortlisted teams; shortlist result | Shortlisted, or the build plan below does not run |

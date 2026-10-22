@@ -5,6 +5,21 @@ sub-entries. What changed and *why*, with what was measured, so a later reader c
 decision from a habit. The canonical state is [`BUILD_INFO.json`](BUILD_INFO.json): refer to it,
 do not copy it here.
 
+## Session 3, 22.10.2026: the idea submitted
+
+**Done:**
+- The idea was submitted on HackerEarth on Thu 22.10. at 18:08 EEST, filled in together with the
+  owner in his Chrome; he confirmed the submit. The dashboard shows it as "Published" and the
+  shortlist result as pending. The text exactly as submitted: [`submission/texts.md`](submission/texts.md).
+- The description went in through the form's TinyMCE editor as HTML converted by script from
+  `texts.md`, so the submitted text is the file's text; it was saved as a draft first and read back
+  (seven links, eight list items, the closing line) before the submit. In the draft's edit view the
+  submit button is labelled "Update", not "Submit".
+
+**Measured:** every link in the text answered 200 just before the submit, except LinkedIn, which
+answers 999 to scripts (its bot block). The HackerEarth discussion had no rubric and no prior-work
+rule; an admin asked teams to wait for the shortlist before preparing for the build (BACKLOG RULES-5).
+
 ## Session 2, 20.10.2026: the repository, the concept and the idea text
 
 **Done:**
