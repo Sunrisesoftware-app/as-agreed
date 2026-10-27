@@ -5,6 +5,20 @@ sub-entries. What changed and *why*, with what was measured, so a later reader c
 decision from a habit. The canonical state is [`BUILD_INFO.json`](BUILD_INFO.json): refer to it,
 do not copy it here.
 
+## Session 4, 27.10.2026: not shortlisted, the entry closed
+
+**Done:**
+- Recorded the result: the idea was not shortlisted for the build phase. The organisers' email said
+  shortlisted teams had been emailed separately and none came; the dashboard said the same. The
+  build phase (25.10.-13.11.) did not run, and no product code was written.
+- Closed the backlog (every build-phase row dropped), marked DECISIONS rows 5, 6 and 11 as dropped,
+  and set the README's status to "concept, not continued".
+- Wrote what we think the screen scored against us into [`LESSONS.md`](LESSONS.md), from the
+  criteria the rejection email named (relevance, impact, innovation, complexity and implementation,
+  product integration).
+
+**Measured:** nothing new; the organisers gave no per-idea feedback, so the lesson is a hypothesis.
+
 ## Session 3, 22.10.2026: the idea submitted
 
 **Done:**

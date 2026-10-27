@@ -1,27 +1,26 @@
 {
   "name": "as-agreed",
   "version": "0.0.0",
-  "phase": "shortlisting",
-  "phaseName": "Airwallex Agentic Banking Hackathon (HackerEarth): idea submitted Thu 22.10.2026 18:08 EEST; shortlisting after the idea deadline Fri 23.10. 21:29 EEST; build phase 25.10. 06:30 EET to Fri 13.11.2026 20:29 EET for shortlisted teams; finalists 15.11., demo day 19.11. (remote possible). Internal target for the build submission: Thu 12.11.",
-  "session": 3,
-  "updated": "2026-10-22",
-  "state": "Session 3, 22.10.2026 (Code). The idea is SUBMITTED on HackerEarth (status Published, 22.10. 18:08 EEST), filled in together with the owner in his Chrome; the text exactly as submitted is docs/submission/texts.md. The shortlist result is pending and decides whether the build phase runs. The repository holds documents only (concept, product, architecture, decisions); no product code before 25.10., and an admin asked teams to wait for the shortlist before preparing for the build (BACKLOG RULES-5). No judging criteria and no prior-work rule published by 22.10.2026.",
+  "phase": "closed",
+  "phaseName": "Airwallex Agentic Banking Hackathon (HackerEarth): idea submitted Thu 22.10.2026 18:08 EEST; NOT shortlisted for the build phase (result by 25.10.2026, the organisers' email read 27.10.2026). The entry did not continue.",
+  "session": 4,
+  "updated": "2026-10-27",
+  "state": "Session 4, 27.10.2026 (Code). CLOSED: the idea was not shortlisted, so the build phase (25.10.-13.11.) did not run and no product code was written. The repository keeps the concept (docs/concept/as-agreed-concept.pdf), the product, architecture and decisions as they stood, and the idea text as submitted (docs/submission/texts.md). The organisers named their criteria only in the rejection email: relevance, impact, innovation, complexity and implementation, and product integration; no per-idea feedback. What we think we learned is docs/LESSONS.md (hypotheses, not measurements).",
   "github": "github.com/Sunrisesoftware-app/as-agreed (public, MIT)",
   "machines": {
-    "windows": "E:\\projects\\sunrisesoftware\\hackathons\\as-agreed on the owner's machine (PowerShell 5.1 for the owner; Git Bash for the agent). Open sessions in this folder: a session in a worktree of hackathon-kit cannot write here. The shared practice is hackathons\\CLAUDE.md (private repository Sunrisesoftware-app/hackathon-kit).",
+    "windows": "E:\\projects\\sunrisesoftware\\hackathons\\as-agreed on the owner's machine. The shared practice and the calendar of events are hackathons\\CLAUDE.md (private repository Sunrisesoftware-app/hackathon-kit).",
     "truth": "main on GitHub is the only truth"
   },
   "atlas": {
-    "system": "none yet (BACKLOG ATLAS-1)",
+    "system": "none (the entry closed before ATLAS-1)",
     "artifacts": {
-      "handoff": "AS-AGREED-HANDOFF v4"
+      "handoff": "AS-AGREED-HANDOFF v4",
+      "report": "AS-AGREED-RAPORTTI v1"
     },
     "decisions": "DECISIONS rows 7-10: dec_e54bebf20a5342ca, dec_411a967615e34a30, dec_5b78f1ec9f8745b6, dec_5b00d5b3afbe4563"
   },
-  "ci": ".github/workflows/ci.yml: secret scan and BUILD_INFO.json parse; the Python steps arrive with the first code (BACKLOG CI-1)",
+  "ci": ".github/workflows/ci.yml: secret scan and BUILD_INFO.json parse",
   "next_session": {
-    "start": "git fetch origin; git rev-list --left-right --count origin/main...HEAD; read this file, docs/BACKLOG.md and Atlas AS-AGREED-HANDOFF v4.",
-    "first": "Read the shortlist result on the HackerEarth dashboard (owner's Chrome) from Sun 25.10. 06:30. Shortlisted: the build plan in docs/roadmap.md starts, beginning with the decision boxes for DECISIONS rows 5, 6 and 11 and the data specification. Not shortlisted: report it in Atlas and stop the build plan.",
-    "then": "Re-read the HackerEarth discussion for the rubric, the prior-work rule, the Slack link and the credits; confirm the owner's sandbox check (BACKLOG P-4)."
+    "start": "Nothing is planned for this entry. If the concept is reused (another payments or verification event), start from docs/product.md, docs/concept/ and docs/LESSONS.md; the control desk in hackathons\\ decides that."
   }
 }

@@ -2,7 +2,7 @@
 
 An agent that pays supplier invoices only as far as they match what was agreed.
 
-> Status: **concept**. An entry to the [Airwallex Agentic Banking Hackathon](https://airwallex.hackerearth.com/) (HackerEarth, online). The build phase opens on 25 October 2026 and no code is written before it; until then this repository holds the concept and the design documents. All data in it is synthetic, and it runs against the Airwallex sandbox only.
+> Status: **concept, not continued**. An idea submitted to the [Airwallex Agentic Banking Hackathon](https://airwallex.hackerearth.com/) (HackerEarth, online) on 22 October 2026. It was not shortlisted for the build phase (25 October 2026), so no code was written; the repository keeps the concept and the design documents as they stood. All data in it is synthetic.
 
 **Concept on one page:** [`docs/concept/as-agreed-concept.pdf`](docs/concept/as-agreed-concept.pdf)
 

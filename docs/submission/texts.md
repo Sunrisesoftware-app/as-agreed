@@ -5,6 +5,11 @@ with the date; until then it is marked DRAFT.
 
 ## Idea phase (Registration & Idea Phase, deadline Fri 23.10.2026 21:29 EEST)
 
+**Result: not shortlisted.** The organisers' email (received by 27.10.2026) said the ideas were
+evaluated on "relevance, impact, innovation, complexity and implementation, and product
+integration", that shortlisted teams had been emailed separately, and that no separate email meant
+no shortlisting; the dashboard showed the same. No per-idea feedback was given.
+
 **State: SUBMITTED on Thu 22.10.2026 at 18:08 EEST** (HackerEarth status "Published"), filled in
 together with the owner in his Chrome; he confirmed the submit. The text below is exactly as
 submitted: it was converted from this file to HTML by script (bold, two bullet lists, seven links)

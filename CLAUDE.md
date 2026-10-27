@@ -12,12 +12,9 @@ submission, session start and end) is `E:\projects\sunrisesoftware\hackathons\CL
 Claude Code reads for this folder too. This file holds only this entry's facts and overrides the
 shared one where the two differ.
 
-**Deadlines (Helsinki time):** the idea by **Fri 23.10.2026 21:29** (a shortlisting gate; target Thu
-22.10.); the build phase 25.10. 06:30 to **Fri 13.11.2026 20:29** for shortlisted teams (target Thu
-12.11.). Read from the HackerEarth dashboard on 19.10.2026; re-read before relying on them.
-
-**No product code before 25.10.2026 06:30**, until the organisers publish a rule on prior work
-(BACKLOG RULES-2). Documents, the data specification and the pre-registration are allowed.
+**Closed on 27.10.2026:** the idea (submitted 22.10.) was not shortlisted, so the build phase did not
+run and no product code exists. What the screen likely scored against us is
+[`docs/LESSONS.md`](docs/LESSONS.md). A reuse of the concept is decided at the hackathons control desk.
 
 ## Where the truth is
 
